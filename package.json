@@ -1,0 +1,19 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "friends.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enigmatic-agent-scully/friend_finder.git"
+  },
+  "author": "aj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enigmatic-agent-scully/friend_finder/issues"
+  },
+  "homepage": "https://github.com/enigmatic-agent-scully/friend_finder#readme"
+}
