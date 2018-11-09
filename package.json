@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/enigmatic-agent-scully/friend_finder/issues"
   },
-  "homepage": "https://github.com/enigmatic-agent-scully/friend_finder#readme"
+  "homepage": "https://github.com/enigmatic-agent-scully/friend_finder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node": "^11.0.0",
+    "path": "^0.12.7"
+  }
 }
