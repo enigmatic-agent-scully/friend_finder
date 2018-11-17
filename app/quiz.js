@@ -58,38 +58,40 @@ const qs = [
   }
 ];
 
-const quiz = $('#quiz');
-const submit = $('#submit');
+const survey = document.getElementById('surveyQs');
+const enter = document.getElementById('enter');
 
 const ansHTML = () => {
-
+  var allA = [];
+  answers.forEach((ansr, n) => {
+    let cA = `<label for='${ansr.value}'>
+           <input name='q${n}' type='radio' id='q${n}-${ansr.value}' value='${ansr.value}'/>
+            <span>${ansr.text}</span>
+            </label>
+        </p>`;
+    allA.push(cA);
+  });
+  console.log(allA);
+  return allA;
 };
+
+
 
 const displayQ = () => {
   var output = [];
 
   qs.forEach((q, qNum) => {
-    let allA = [];
+
     let cQ = `
     <p>
-    <h6>${qNum}. ${q}</h6>
+    <h6>${qNum}. ${q.q}</h6>
     </p>
     <p>`
     output.push(cQ);
 
-    answers.forEach((ans) => {
-      let a = `
-      <label for='${ans.value}'>
-      <input name='q${qNum}' type='radio' id='q${qNum}-${ans.value}' value='${ans.value}'/>
-      <span>${ans.text}</span>
-      </label>
-      </p>`;
-      allA.push(a);
+    ansHTML();
 
-    });
-
-    output.push(allA);
-    $('#quiz').html(`<form id = 'myForm'>${output.join('')}</form><br><input type='submit' id='submit'>`);
+    $('#surveyQs').html(`${output.join('')}<br><input type='enter' id='enter'>`);
   });
   console.log(output);
 };
