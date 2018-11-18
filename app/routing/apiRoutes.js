@@ -6,28 +6,33 @@ module.exports = (app) => {
   });
 
   app.post('/api/friends', (req, res) => {
-    friendData.push(req.body);
     console.log(req.body);
     var allFriendsArr = [];
     var newFriendArr = [];
-
     req.body.scores.map(e => {
       newFriendArr.push(parseInt(e));
     });
     console.log(`new friend scores: ${newFriendArr}`);
-
     for (var i = 0; i < friendData.length; i++) {
       allFriendsArr.push(friendData[i].scores);
     }
     console.log('all pals', allFriendsArr);
     var someArr = calc(newFriendArr, allFriendsArr);
+    var indexOfSmallestArr = getIndexOfSmallest(someArr);
     console.log(`some array : ${someArr}`);
+    console.log('Indexes of smallest Array:', indexOfSmallestArr);
+
+    friendData.push(req.body);
+
+    // The matching person is:
+    var matchedPerson = friendData[indexOfSmallestArr[0]];
+    console.log(matchedPerson);
+    res.json(matchedPerson);
+
   })
 }
 
-// newFriend = [1, 2, 3]
-// allFriend = [ [2, 3, 4], [4, 2, 1], [3, 5, 7] ]
-//temp = [1,2,]
+
 
 var calc = function (firstArray, secondArray) {
   var finalResultsArray = [];
@@ -40,23 +45,22 @@ var calc = function (firstArray, secondArray) {
         }
       }
     }
-    // sum temp element, and add to finalResultsArray
     finalResultsArray.push(temp.reduce((a, b) => a + b, 0));
   });
   return finalResultsArray;
 }
 
-// const calc = function (arr1, arr2) {
-//   var finalRes = [];
-//   arr2.forEach(secondArrElem => {
-//     var temp = [];
-//     for (i in secondArrElem) {
-//       for (j in arr1) {
-//         temp.push(Math.abs(arr1[j] - secondArrElem[i]));
-//       }
-//     }
-//     console.log(temp.reduce((a, b) => a + b));
-//   }
-//   )
-//   return finalRes;
-// }
+var getIndexOfSmallest = (finalRes) => {
+  Array.min = (array) => {
+    return Math.min.apply(Math, array);
+  }
+  var smallest = Array.min(finalRes);
+  var indexOfSmallest = [];
+  for (let i = 0; i < finalRes.length; i++) {
+    const element = finalRes[i];
+    if (element == smallest) {
+      indexOfSmallest.push(finalRes.indexOf(smallest, i));
+    }
+  }
+  return indexOfSmallest;
+}
