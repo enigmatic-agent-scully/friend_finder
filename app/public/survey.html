@@ -395,7 +395,7 @@
               </label>
             </p>
             <p>
-              <button class="waves-effect waves-light btn modal-trigger" data-target=""="#modal1" type='submit' id='enter'>Submit</button>
+              <button class="waves-effect waves-light btn modal-trigger" data-target="#modal1" type='submit' id='enter'>Submit</button>
             </p>
         </div>
 
@@ -419,6 +419,7 @@
 <script type="text/javascript">
 
   $('#enter').on('click', (e) => {
+    e.preventDefault();
     var q1 = parseInt($('input[name=q1]:checked').val());
     var q2 = parseInt(($('input[name=q2]:checked').val()), 10);
     var q3 = parseInt(($('input[name=q3]:checked').val()), 10);
