@@ -7,36 +7,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <meta rt" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <title>Friend Finder</title>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class='container'>
-    <h1>Friend Finder Survey</h1>
+    <form class='col s12'>
+      <h1>Friend Finder Survey</h1>
 
-    <div class='row'>
-      <form class='col s12'>
-        <div class='input-field'>
-          <input id='name' type='text'>
-          <label for='name'>yr name</label>
-        </div>
-        <div class='input-field'>
-          <input id='email' type='email' class='validate'>
-          <label for='email'>yr email</label>
-        </div>
-        <div class="input-field">
-          <input id='yrface' type="url">
-          <label for='yrface'>url of yr face</label>
-        </div>
-        <div id='surveyQs'>
-          <p>
-            <h6>You often contemplate the complexities of life and the universe.</h6>
-          </p>
+      <div class='input-field col s12'>
+        <input id='name' type='text' value='Your Name'>
+        <label for='name'>yr name</label>
+      </div>
+
+      <div class='input-field col s12'>
+        <input id='email' type='email' class='validate' value='email@google.com'>
+        <label for='email'>yr email</label>
+      </div>
+
+      <div class="input-field col s12">
+        <input id='yrface' type="url">
+        <label for='yrface'>url of yr face</label>
+      </div>
+
+      <div id='surveyQs'>
+        <p>
+          <h6>You often contemplate the complexities of life and the universe.</h6>
+        </p>
+        <p>
           <p>
             <label for='q1-1'>
-              <input name='q1' type='radio' id='q1-1' value='1' />
+              <input name='q1' type='radio' id='q1-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -69,7 +74,7 @@
           </p>
           <p>
             <label for='q2-1'>
-              <input name='q2' name='q1' type='radio' id='q2-1' value='1' />
+              <input name='q2' name='q1' type='radio' id='q2-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -102,7 +107,7 @@
           </p>
           <p>
             <label for='q3-1'>
-              <input name='q3' type='radio' id='q3-1' value='1' />
+              <input name='q3' type='radio' id='q3-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -135,7 +140,7 @@
           </p>
           <p>
             <label for='q4-1'>
-              <input name='q4' type='radio' id='q4-1' value='1' />
+              <input name='q4' type='radio' id='q4-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -170,7 +175,7 @@
           </p>
           <p>
             <label for='q5-1'>
-              <input name='q5' type='radio' id='q5-1' value='1' />
+              <input name='q5' type='radio' id='q5-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -203,7 +208,7 @@
           </p>
           <p>
             <label for='q6-1'>
-              <input name='q6' type='radio' id='q6-1' value='1' />
+              <input name='q6' type='radio' id='q6-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -236,7 +241,7 @@
           </p>
           <p>
             <label for='q7-1'>
-              <input name='q7' type='radio' id='q7-1' value='1' />
+              <input name='q7' type='radio' id='q7-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -269,7 +274,7 @@
           </p>
           <p>
             <label for='q8-1'>
-              <input name='q8' type='radio' id='q8-1' value='1' />
+              <input name='q8' type='radio' id='q8-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -304,7 +309,7 @@
           </p>
           <p>
             <label for='q9-1'>
-              <input name='q9' type='radio' id='q9-1' value='1' />
+              <input name='q9' type='radio' id='q9-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -337,7 +342,7 @@
           </p>
           <p>
             <label for='q10-1'>
-              <input name='q10' type='radio' id='q10-1' value='1' />
+              <input name='q10' type='radio' id='q10-1' value='1' checked />
               <span>YES</span>
             </label>
           </p>
@@ -368,16 +373,51 @@
           <p>
             <input type='submit' id='enter' />
           </p>
-        </div>
-      </form>
-    </div>
+      </div>
+
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script type='text/javascript' src='../server.js'></script>
+
+  </form>
+  </div>
+  <div class='container' id='footer'>
+    <p>footer content</p>
+  </div>
+
+
+
+
 
 </body>
 
 </html>
+<script type="text/javascript">
+
+  $('#enter').on('click', (e) => {
+    e.preventDefault();
+    var q1 = parseInt($('input[name=q1]:checked').val());
+    var q2 = Number($('input[name=q2]:checked').val());
+    var q3 = Number($('input[name=q3]:checked').val());
+    var q3 = Number($('input[name=q3]:checked').val());
+    var q4 = Number($('input[name=q4]:checked').val());
+    var q5 = Number($('input[name=q5]:checked').val());
+    var q6 = Number($('input[name=q6]:checked').val());
+    var q7 = Number($('input[name=q7]:checked').val());
+    var q8 = Number($('input[name=q8]:checked').val());
+    var q9 = Number($('input[name=q9]:checked').val());
+    var q10 = Number($('input[name=q10]:checked').val());
+    var newFriend = {
+      name: $('#name').val(),
+      email: $('#email').val(),
+      face: $('#yrface').val(),
+      scores: [
+        q1, q2, q3, q4, q5, q6, q7, q8, q9, q10
+      ]
+    };
+    console.log(newFriend);
+
+    $.post('/api/friends', newFriend, data => {
+      console.log(data);
+    });
+  });
+
+</script>
