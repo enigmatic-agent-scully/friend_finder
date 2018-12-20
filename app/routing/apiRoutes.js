@@ -1,6 +1,6 @@
 var friendData = require('../data/friends');
 
-module.exports = (app) => {
+module.exports = app => {
   app.get('/api/friends', (req, res) => {
     return res.json(friendData);
   });
@@ -19,22 +19,19 @@ module.exports = (app) => {
     console.log('all pals', allFriendsArr);
     var someArr = calc(newFriendArr, allFriendsArr);
     var indexOfSmallestArr = getIndexOfSmallest(someArr);
-    console.log(`some array : ${someArr}`);
-    console.log('Indexes of smallest Array:', indexOfSmallestArr);
+    console.log(`Array of differences: ${someArr}`);
+    console.log('Index of smallest Array:', indexOfSmallestArr);
 
     friendData.push(req.body);
 
     // The matching person is:
-    var matchedPerson = friendData[indexOfSmallestArr[0]];
+    var matchedPerson = friendData[indexOfSmallestArr];
     console.log(matchedPerson);
     res.json(matchedPerson);
+  });
+};
 
-  })
-}
-
-
-
-var calc = function (firstArray, secondArray) {
+var calc = function(firstArray, secondArray) {
   var finalResultsArray = [];
   secondArray.forEach(secondArrayElements => {
     var temp = [];
@@ -48,12 +45,12 @@ var calc = function (firstArray, secondArray) {
     finalResultsArray.push(temp.reduce((a, b) => a + b, 0));
   });
   return finalResultsArray;
-}
+};
 
-var getIndexOfSmallest = (finalRes) => {
-  Array.min = (array) => {
+var getIndexOfSmallest = finalRes => {
+  Array.min = array => {
     return Math.min.apply(Math, array);
-  }
+  };
   var smallest = Array.min(finalRes);
   var indexOfSmallest = [];
   for (let i = 0; i < finalRes.length; i++) {
@@ -63,4 +60,4 @@ var getIndexOfSmallest = (finalRes) => {
     }
   }
   return indexOfSmallest;
-}
+};
