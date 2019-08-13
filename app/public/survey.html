@@ -1,0 +1,466 @@
+<!doctype html>
+
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>
+  <meta rt' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Friend Finder</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'>
+  </script>
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+    crossorigin='anonymous'></script>
+</head>
+
+<body>
+  <header>
+    <nav class='top-nav'>
+      <div class='container'>
+        <div class='nav-wrapper'>
+          <div class='row'>
+            <div class='col s12 offset-m1'>
+              <a class='brand-logo center'>Friend Finder Survey</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class='container'>
+
+      <form class='col s12'>
+
+
+        <div class='input-field col s12'>
+          <input id='name' type='text'>
+          <label for='name'>yr name</label>
+        </div>
+
+        <div class='input-field col s12'>
+          <input id='github_user' type='url' value='https://github.com/'>
+          <label for='github_user'>yr github</label>
+        </div>
+
+        <div class='input-field col s12'>
+          <input id='yrface' type='url'>
+          <label for='yrface'>url of yr face</label>
+        </div>
+
+        <div id='surveyQs'>
+          <p>
+            <h6>You often contemplate the complexities of life and the universe.</h6>
+          </p>
+          <p>
+            <p>
+              <label for='q1-1'>
+                <input name='q1' type='radio' id='q1-1' value='1' />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q1-2'>
+                <input name='q1' type='radio' id='q1-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q1-3'>
+                <input name='q1' type='radio' id='q1-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q1-4'>
+                <input name='q1' type='radio' id='q1-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q1-5'>
+                <input name='q1' type='radio' id='q1-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You find it difficult to introduce yourself to other people.</h6>
+            </p>
+            <p>
+              <label for='q2-1'>
+                <input name='q2' name='q1' type='radio' id='q2-1' value='1' />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q2-2'>
+                <input name='q2' type='radio' id='q2-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q2-3'>
+                <input name='q2' type='radio' id='q2-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q2-4'>
+                <input name='q2' type='radio' id='q2-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q2-5'>
+                <input name='q2' type='radio' id='q2-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You often get so lost in thought that you ignore or forget your surroundings.</h6>
+            </p>
+            <p>
+              <label for='q3-1'>
+                <input name='q3' type='radio' id='q3-1' value='1' />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q3-2'>
+                <input name='q3' type='radio' id='q3-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q3-3'>
+                <input name='q3' type='radio' id='q3-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q3-4'>
+                <input name='q3' type='radio' id='q3-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q3-5'>
+                <input name='q3' type='radio' id='q3-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You prefer going out to a club or bar with friends to staying home and watching tv on the weekends.</h6>
+            </p>
+            <p>
+              <label for='q4-1'>
+                <input name='q4' type='radio' id='q4-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q4-2'>
+                <input name='q4' type='radio' id='q4-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q4-3'>
+                <input name='q4' type='radio' id='q4-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q4-4'>
+                <input name='q4' type='radio' id='q4-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q4-5'>
+                <input name='q4' type='radio' id='q4-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You love to travel to new destinations and learn new things about people and cultures different
+                from
+                yourself.</h6>
+            </p>
+            <p>
+              <label for='q5-1'>
+                <input name='q5' type='radio' id='q5-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q5-2'>
+                <input name='q5' type='radio' id='q5-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q5-3'>
+                <input name='q5' type='radio' id='q5-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q5-4'>
+                <input name='q5' type='radio' id='q5-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q5-5'>
+                <input name='q5' type='radio' id='q5-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You struggle to make small talk with strangers.</h6>
+            </p>
+            <p>
+              <label for='q6-1'>
+                <input name='q6' type='radio' id='q6-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q6-2'>
+                <input name='q6' type='radio' id='q6-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q6-3'>
+                <input name='q6' type='radio' id='q6-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q6-4'>
+                <input name='q6' type='radio' id='q6-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q6-5'>
+                <input name='q6' type='radio' id='q6-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>Your mood can change quickly, depending on outside circumstances.</h6>
+            </p>
+            <p>
+              <label for='q7-1'>
+                <input name='q7' type='radio' id='q7-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q7-2'>
+                <input name='q7' type='radio' id='q7-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q7-3'>
+                <input name='q7' type='radio' id='q7-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q7-4'>
+                <input name='q7' type='radio' id='q7-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q7-5'>
+                <input name='q7' type='radio' id='q7-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You have a tendency to become highly engaged with fictional worlds and characters.</h6>
+            </p>
+            <p>
+              <label for='q8-1'>
+                <input name='q8' type='radio' id='q8-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q8-2'>
+                <input name='q8' type='radio' id='q8-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q8-3'>
+                <input name='q8' type='radio' id='q8-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q8-4'>
+                <input name='q8' type='radio' id='q8-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q8-5'>
+                <input name='q8' type='radio' id='q8-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>You believe that everyone should seek to improve upon themselves, not only for their own benefit
+                but
+                for the betterment of humankind.</h6>
+            </p>
+            <p>
+              <label for='q9-1'>
+                <input name='q9' type='radio' id='q9-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q9-2'>
+                <input name='q9' type='radio' id='q9-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q9-3'>
+                <input name='q9' type='radio' id='q9-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q9-4'>
+                <input name='q9' type='radio' id='q9-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q9-5'>
+                <input name='q9' type='radio' id='q9-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <h6>In a rational discussion, truth should be more important than people’s sensitivities.</h6>
+            </p>
+            <p>
+              <label for='q10-1'>
+                <input name='q10' type='radio' id='q10-1' value='1'  />
+                <span>YES</span>
+              </label>
+            </p>
+            <p>
+              <label for='q10-2'>
+                <input name='q10' type='radio' id='q10-2' value='2' />
+                <span>yes</span>
+              </label>
+            </p>
+            <p>
+              <label for='q10-3'>
+                <input name='q10' type='radio' id='q10-3' value='3' />
+                <span>yes and no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q10-4'>
+                <input name='q10' type='radio' id='q10-4' value='4' />
+                <span>no</span>
+              </label>
+            </p>
+            <p>
+              <label for='q10-5'>
+                <input name='q10' type='radio' id='q10-5' value='5' />
+                <span>NO</span>
+              </label>
+            </p>
+            <p>
+              <a class='waves-effect waves-light btn modal-trigger' href="#results-modal" id='enter'>Submit</a>
+            </p>
+        </div>
+
+    </div>
+
+    </form>
+    </div>
+  </main>
+  <footer class='page-footer'>
+    <div class='footer-copyright'>
+      <div class='container'>
+        © 2018 AJ
+        <a class='grey-text text-lighten-4 right' href='/'>Go Home</a>
+      </div>
+    </div>
+  </footer>
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" alt="">
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script type='text/javascript'>
+$(document).ready(function () {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems);
+  $('#enter').on('click', (e) => {
+    e.preventDefault();
+    var q1 = parseInt(($('input[name=q1]:checked').val()), 10);
+    var q2 = parseInt(($('input[name=q2]:checked').val()), 10);
+    var q3 = parseInt(($('input[name=q3]:checked').val()), 10);
+    var q3 = parseInt(($('input[name=q3]:checked').val()), 10);
+    var q4 = parseInt(($('input[name=q4]:checked').val()), 10);
+    var q5 = parseInt(($('input[name=q5]:checked').val()), 10);
+    var q6 = parseInt(($('input[name=q6]:checked').val()), 10);
+    var q7 = parseInt(($('input[name=q7]:checked').val()), 10);
+    var q8 = parseInt(($('input[name=q8]:checked').val()), 10);
+    var q9 = parseInt(($('input[name=q9]:checked').val()), 10);
+    var q10 = parseInt(($('input[name=q10]:checked').val()), 10);
+    var newFriend = {
+      name: $('#name').val(),
+      github_user: $('#github_user').val(),
+      face: $('#yrface').val(),
+      scores: [
+        q1, q2, q3, q4, q5, q6, q7, q8, q9, q10
+      ]
+    };
+    console.log(newFriend);
+
+    $.post('/api/friends', newFriend, function (data) {
+      console.log(data);
+      
+      $("#match-name").text(data.name);
+      $("#match-img").attr("src", data.face);
+    });
+  });
+})
+  
+
+</script>
+</body>
+
+</html>
